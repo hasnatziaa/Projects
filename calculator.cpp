@@ -2,6 +2,20 @@
 #include <cmath>
 using namespace std;
 
+void print1(int &num1, int &num2)
+{
+    cout << "Enter 1st number : ";
+    cin >> num1;
+    cout << "Enter 2nd number : ";
+    cin >> num2;
+}
+
+void print2(int &num1)
+{
+    cout << "Enter a number : ";
+    cin >> num1;
+}
+
 void table(int num1)
 {
     cout << "\nTable of " << num1 << endl;
@@ -24,34 +38,22 @@ int main()
         switch (choice)
         {
         case 1:
-            cout << "Enter 1st number : ";
-            cin >> num1;
-            cout << "Enter 2nd number : ";
-            cin >> num2;
+            print1(num1, num2);
             cout << "\nResult = " << num1 + num2 << endl;
             break;
 
         case 2:
-            cout << "Enter 1st number : ";
-            cin >> num1;
-            cout << "Enter 2nd number : ";
-            cin >> num2;
+            print1(num1, num2);
             cout << "\nResult = " << num1 - num2 << endl;
             break;
 
         case 3:
-            cout << "Enter 1st number : ";
-            cin >> num1;
-            cout << "Enter 2nd number : ";
-            cin >> num2;
+            print1(num1, num2);
             cout << "\nResult = " << num1 * num2 << endl;
             break;
 
         case 4:
-            cout << "Enter Dividend : ";
-            cin >> num1;
-            cout << "Enter Divisor : ";
-            cin >> num2;
+            print1(num1, num2);
             if (num2 == 0)
                 cout << "Error: Division by 0 is not possible." << endl;
             else
@@ -59,37 +61,31 @@ int main()
             break;
 
         case 5:
-            cout << "Enter a number : ";
-            cin >> num1;
+            print2(num1);
             cout << "\nResult = " << num1 * num1 << endl;
             break;
 
         case 6:
-            cout << "Enter a number : ";
-            cin >> num1;
+            print2(num1);
             cout << "\nResult = " << sqrt(num1) << endl;
             break;
 
         case 7:
-            cout << "Enter a number : ";
-            cin >> num1;
+            print2(num1);
             cout << "\nResult = " << cbrt(num1) << endl;
             break;
 
         case 8:
-            cout << "Enter Dividend : ";
-            cin >> num1;
-            cout << "Enter Divisor : ";
-            cin >> num2;
+            print1(num1, num2);
             if (num2 == 0)
-                cout << "Error: Division by 0 is not possible." << endl;
+                cout
+                    << "Error: Division by 0 is not possible." << endl;
             else
                 cout << "\nRemainder = " << num1 % num2 << endl;
             break;
 
         case 9:
-            cout << "Enter a number : ";
-            cin >> num1;
+            print2(num1);
             table(num1);
             break;
 
